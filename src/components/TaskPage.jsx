@@ -11,8 +11,7 @@ function TaskPage() {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const res = await axios.get('https://argonz-project-backend.onrender.com
-/api/public-tasks');
+        const res = await axios.get('https://argonz-project-backend.onrender.com/api/public-tasks');
         const dbTasks = res.data.data.map(task => ({
           ...task,
           // Add dummy team members for UI (since backend doesn't store them)
